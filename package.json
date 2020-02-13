@@ -1,0 +1,24 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "Create a command-line application that dynamically generates a PDF profile from a GitHub username. The application will be invoked with the following command: node index.js The user will be prompted for a favorite color, which will be used as the background color for cards. The PDF will be populated with the following:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crispysodium/crispy_devProfileGenerator.git"
+  },
+  "author": "crispysodium",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crispysodium/crispy_devProfileGenerator/issues"
+  },
+  "homepage": "https://github.com/crispysodium/crispy_devProfileGenerator#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "fs": "0.0.1-security",
+    "inquirer": "^7.0.4"
+  }
+}
