@@ -172,3 +172,54 @@ function generateHTML(data) {
          }
       </style>`
         }
+
+function generateBody(data) {
+  return `
+  </head>
+  <body class="wrapper">
+       <div class="photo-header">
+           <img src="${data.image}" alt="profile-pic">
+           <h1>Hi!</h1>
+           <h1>My name is ${data.name}</h1>
+           <h4>Currently @ ${data.company}</h4>
+           <div class="links-nav">
+               <a class="nav-link" href="${data.location}">location</a>
+               <a class="nav-link" href="${data.github}">github</a>
+               <a class="nav-link" href="${data.blog}">blog</a>
+           </div>
+       </div>
+      
+      <main class="container">
+           <div class="row">
+               <h2 class="col">${data.bio}</h1>
+           </div>   
+       
+           <div class = "row">
+               <div class="col card">
+                   <h2>Public Repositories</h2>
+                   <h3>${data.publicRepos}</h3>
+               </div>
+               <div class="col card">
+                   <h2>Followers</h2>
+                   <h3>${data.followers}</h3>
+               </div>
+           </div>
+           <div class = "row">
+               <div class="col card">
+                   <h2>GitHub Stars</h2>
+                   <h3>${data.stars}</h3>
+               </div>
+               <div class="col card">
+                   <h2>Following</h2>
+                   <h3>${data.following}</h3>
+               </div>
+           </div>
+       </main>
+      
+  </body>
+</html>`
+}
+
+module.exports.colors = colors;
+module.exports.generateHTML = generateHTML;
+module.exports.generateBody = generateBody;
