@@ -174,14 +174,7 @@ function generateHTML(data) {
         }
 
 function generateBody(data) {
-  // loop over keys to check for null entries
-  const objKeys = Object.keys(data);
-  objKeys.forEach(key => {
-    if(data[key] === null) {
-      data[key] = "Unknown";
-    }
-  });
-    
+// did not report company in case of a null value.
   return `
   </head>
   <body class="wrapper">
