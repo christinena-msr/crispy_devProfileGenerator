@@ -1,0 +1,29 @@
+{
+  "name": "crispy_devprofilegenerator",
+  "version": "1.0.0",
+  "description": "generates user profile from github username",
+  "main": "profile.js",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "electron": "^8.0.1",
+    "electron-html-to": "^2.6.0",
+    "fs": "^0.0.1-security",
+    "inquirer": "^7.0.4",
+    "object-assign": "^4.1.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crispysodium/crispy_devProfileGenerator.git"
+  },
+  "author": "crispysodium",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crispysodium/crispy_devProfileGenerator/issues"
+  },
+  "homepage": "https://github.com/crispysodium/crispy_devProfileGenerator#readme"
+}

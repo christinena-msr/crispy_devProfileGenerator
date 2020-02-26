@@ -34,7 +34,7 @@ function generateHTML(data) {
       <meta http-equiv="X-UA-Compatible" content="ie=edge" />
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"/>
       <link href="https://fonts.googleapis.com/css?family=BioRhyme|Cabin&display=swap" rel="stylesheet">
-      <title>Document</title>
+      <title>Profile</title>
       <style>
           @page {
             margin: 0;
@@ -174,6 +174,14 @@ function generateHTML(data) {
         }
 
 function generateBody(data) {
+  // loop over keys to check for null entries
+  const objKeys = Object.keys(data);
+  objKeys.forEach(key => {
+    if(data[key] === null) {
+      data[key] = "Unknown";
+    }
+  });
+    
   return `
   </head>
   <body class="wrapper">
@@ -183,15 +191,15 @@ function generateBody(data) {
            <h1>My name is ${data.name}</h1>
            <h4>Currently @ ${data.company}</h4>
            <div class="links-nav">
-               <a class="nav-link" href="${data.location}">location</a>
-               <a class="nav-link" href="${data.github}">github</a>
-               <a class="nav-link" href="${data.blog}">blog</a>
+               <a class="nav-link" href="https://www.google.com/maps/place/${data.location}"><span class="fas fa-location-arrow"></span> ${data.location}</a>
+               <a class="nav-link" href="${data.github}"><span class="fab fa-github"></span> GitHub</a>
+               <a class="nav-link" href="${data.blog}"><span class="fas fa-rss"></span> Blog</a>
            </div>
        </div>
       
       <main class="container">
            <div class="row">
-               <h2 class="col">${data.bio}</h1>
+               <h2 class="col">${data.bio}</h2>
            </div>   
        
            <div class = "row">
