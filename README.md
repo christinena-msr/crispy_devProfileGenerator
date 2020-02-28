@@ -1,8 +1,11 @@
 # GitHub Profile Generator
 
 ## Overview
-This is a Node application that will create a pdf with information from a github profile. Instead of manually searching, recording, and creating reports of potential developer candidates, this app will automatically grab important information, links, and style the information in an easy-to-read format. 
-Using the GitHub API & asynchronous functions, you will be able to user this app to generate as many profile pdf files as you need to. 
+This is a Node application that will create a pdf with information from a github profile. Instead of manually searching, recording, and creating reports of potential developer candidates, this app will automatically grab important information and relevelt contact links and style the report in an easy-to-read format. 
+
+Using the GitHub API & asynchronous functions, you will be able to use this app to generate as many profile pdf files as you need to. 
+
+This is a great resource for time-constrained recruiters & hiring managers who want to compile information on many potential candidates through GitHub profiles. 
 
 ## Instructions
 1. Install node 
@@ -27,8 +30,11 @@ node profile.js
 
 ## Concepts Learned & Applied
 * Node
-* Asynchronous Axios calls
-* Promise handling
+* Asynchronous API calls with Axios
+* Asynchronous Promise handling
 * HTML to PDF conversion using Electron
-* Inquirer 
-* File System (fs)
+* Inquirer question user prompt
+* File System (fs) creating new files locally
+
+## Credits
+Author: [crispysodium](https://github.com/crispysodium)
