@@ -23,3 +23,12 @@ node profile.js
 > pink
 > red
 ```
+4. Voila! You should see a pdf file generated with the name profile-[username].pdf created in the same folder.
+
+## Concepts Learned & Applied
+* Node
+* Asynchronous Axios calls
+* Promise handling
+* HTML to PDF conversion using Electron
+* Inquirer 
+* File System (fs)
