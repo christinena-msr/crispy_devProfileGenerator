@@ -182,7 +182,6 @@ function generateBody(data) {
            <img src="${data.image}" alt="profile-pic">
            <h1>Hi!</h1>
            <h1>My name is ${data.name}</h1>
-           <h4>Currently @ ${data.company}</h4>
            <div class="links-nav">
                <a class="nav-link" href="https://www.google.com/maps/place/${data.location}"><span class="fas fa-location-arrow"></span> ${data.location}</a>
                <a class="nav-link" href="${data.github}"><span class="fab fa-github"></span> GitHub</a>

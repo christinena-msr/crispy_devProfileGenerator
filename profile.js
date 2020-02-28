@@ -14,20 +14,23 @@ inquirer
         name: 'username'
     },
     {
-        message: 'Enter your favorite color',
-        name: 'color'
+        type: 'list',
+        message: 'Pick your favorite color',
+        name: 'color',
+        choices: ['green', 'blue', 'pink', 'red'],
     }])
     .then(res => {
         // returns the beginning html file with color formatting
-        console.log(res);
         const headerHTML = html.generateHTML(res);
 
+        // axios calls for github information
         const url = `https://api.github.com/users/${res.username}`;
         const starredURL = `https://api.github.com/users/${res.username}/starred?per_page=100`;
         
         axios.get(url)
             .then((response) => {
                 const user = response.data;
+                // object with key values of github information
                 const userData = {
                     name: user.name,
                     image: user.avatar_url,
@@ -42,12 +45,14 @@ inquirer
                 };
                 axios.get(starredURL)
                     .then((promise) => {
+                        // github starred repos information in a separate axios call
                         const starredCount = promise.data.map(starred => starred.name);
                         userData.stars = starredCount.length;
                         const bodyHTML = html.generateBody(userData);
                         const userHTML = headerHTML + bodyHTML;
                         
                         // pulled from electron-html-to 
+                        // converts html to pdf
                         const conversion = convertFactory({
                             converterPath: convertFactory.converters.PDF
                         });
