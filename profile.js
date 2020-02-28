@@ -64,7 +64,7 @@ inquirer
                             
                             console.log("Pages created: " + result.numberOfPages);
                             console.log("Created a pdf of user's profile!");
-                            result.stream.pipe(fs.createWriteStream(`./profile-${res.username}.pdf`));
+                            result.stream.pipe(fs.createWriteStream(`./assets/profile-${res.username}.pdf`));
                             conversion.kill(); // necessary if you use the electron-server strategy
                         });
 

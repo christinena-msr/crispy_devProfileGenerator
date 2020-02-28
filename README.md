@@ -7,6 +7,9 @@ Using the GitHub API & asynchronous functions, you will be able to use this app 
 
 This is a great resource for time-constrained recruiters & hiring managers who want to compile information on many potential candidates through GitHub profiles. 
 
+## Demo
+You will find an animated gif that demos the application in the "Assets" folder.
+
 ## Instructions
 1. Install node 
 ```
@@ -26,7 +29,8 @@ node profile.js
 > pink
 > red
 ```
-4. Voila! You should see a pdf file generated with the name profile-[username].pdf created in the same folder.
+4. Voila! You should see a pdf file generated with the name profile-[username].pdf created in the `./assets` folder.
+ 
 
 ## Concepts Learned & Applied
 * Node
